@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+<div>
+{% block content %}
+
+{% for label in labels %}
+    {{ label.name }}
+{% endfor %}
+</div>
+
+{% endblock %}
