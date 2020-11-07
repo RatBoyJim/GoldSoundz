@@ -13,9 +13,6 @@ def save(label):
     label.id = id
     return label
 
-def delete_all():
-    sql = "DELETE  FROM labels"
-    run_sql(sql)
 
 def select_all():
     labels = []
@@ -27,3 +24,31 @@ def select_all():
         label = Label(row['name'], row['email'], row['id'] )
         labels.append(label)
     return labels
+
+
+def select(id):
+    label = None
+    sql = "SELECT * FROM labels WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        label = Label(result['name'], result['email'], result['id'])
+    return label
+
+
+def update(label):
+    sql = "UPDATE labels SET (name, email) = (%s, %s) WHERE id = %s"
+    values = [label.first_name, label.email, label.id]
+    run_sql(sql, values)
+
+
+def delete_all():
+    sql = "DELETE  FROM labels"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = 'DELETE  FROM tasks WHERE id = %s'
+    values= [id]
+    run-sql(sql, values)

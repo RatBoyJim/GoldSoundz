@@ -11,7 +11,6 @@ CREATE TABLE albums (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
     artist VARCHAR(255),
-    label VARCHAR(255),
     amount_units INT,
     ideal_units INT,
     cost FLOAT,

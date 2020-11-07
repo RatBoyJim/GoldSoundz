@@ -13,9 +13,6 @@ def save(album):
     album.id = id
     return album
 
-def delete_all():
-    sql = "DELETE  FROM albums"
-    run_sql(sql)
 
 def select_all():
     albums = []
@@ -25,7 +22,33 @@ def select_all():
 
     for row in results:
         label = label_repository.select(row['label_id'])
-        album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], row['label_id'], row['id'] )
+        album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
         albums.append(album)
     return albums
+
+
+def select(id):
+    album = None
+    sql = "SELECT * FROM albums WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+
+    if result is not None:
+        label = label_repository.select(result['label_id'])
+        album = Album(result['title'], result['artist'], result['amount_units'], result['ideal_units'], result['cost'], result['sell_price'], result['genre'], label, result['id'])
+    return album
+
+def update(album):
+    sql = "UPDATE albums SET (title, artist, amount_units, ideal_units, cost, sell_price, genre, label_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [album.title, album.artist, album.amount_units, album.ideal_units, album.cost, album.sell_price, album.genre, album.label.id]
+    run_sql(sql, values)
+
+def delete_all():
+    sql = "DELETE  FROM albums"
+    run_sql(sql)
+
+def delete(id):
+    sql = 'DELETE  FROM tasks WHERE id = %s'
+    values= [id]
+    run-sql(sql, values)
 
