@@ -1,5 +1,5 @@
 DROP TABLE albums;
-DROP labels;
+DROP TABLE labels;
 
 CREATE TABLE labels (
     id SERIAL PRIMARY KEY,
@@ -15,7 +15,7 @@ CREATE TABLE albums (
     amount_units INT,
     ideal_units INT,
     cost FLOAT,
-    sell_price FLOAT
+    sell_price FLOAT,
     genre VARCHAR(255),
     label_id INT REFERENCES labels(id)
 );
