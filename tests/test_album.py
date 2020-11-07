@@ -4,8 +4,8 @@ from models.album import *
 
 class TestAlbum(unittest.TestCase):
     def setUp(self):
-        self.album_1 = Album(1, "Crooked Rain Crooked Rain", "Pavement", "Matador", 4, 2, 5.00, 10.00, "Alternative", 1)
-        self.album_2 = Album(2, "Surfer Rosa", "Pixies", "4AD", 6, 4, 3.00, 5.00, "Alternative", 1)
+        self.album_1 = Album("Crooked Rain Crooked Rain", "Pavement", "Matador", 4, 2, 5.00, 10.00, "Alternative", 1)
+        self.album_2 = Album("Surfer Rosa", "Pixies", "4AD", 6, 4, 3.00, 5.00, "Alternative", 1)
 
     def test_album_has_title(self):
         self.assertEqual("Crooked Rain Crooked Rain", self.album_1.title)

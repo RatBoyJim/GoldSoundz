@@ -1,7 +1,6 @@
 class Album:
 
-    def __init__(self, id, title, artist, label, amount_units, ideal_units, cost, sell_price, genre, label_id):
-        self.id = id
+    def __init__(self, title, artist, label, amount_units, ideal_units, cost, sell_price, genre, label_id, id = None):
         self.title = title
         self.artist = artist
         self.label = label
@@ -11,3 +10,4 @@ class Album:
         self.sell_price = sell_price
         self.genre = genre
         self.label_id = label_id
+        self.id = id
