@@ -4,8 +4,31 @@
 {% block content %}
 
 {% for album in albums %}
-    {{ album.title }}
+    <li>Title</li>
+    <p>{{ album.title }}</p>
+    <p>Artist</p>
+    <p>{{ album.artist }}</p>
+    <p>Amount of units in stock</p>
+    <p>{{ album.amount_units }}</p>
+    <p>Ideal number of units</p>
+    <p>{{ album.ideal_units }}</p>
+    <p>Buy-in cost</p>
+    <p>{{ album.cost }}</p>
+    <p>Selling price</p>
+    <p>{{ album.sell_price }}</p>
+    <p>Label ID</p>
+    <p>{{ album.label.id }}</p>
+    <p>Album ID</p>
+    <p>{{ album.id }}</p>
 {% endfor %}
 </div>
 
 {% endblock %}
+
+self.amount_units = amount_units
+self.ideal_units = ideal_units
+self.cost = cost
+self.sell_price = sell_price
+self.genre = genre
+self.label = label
+self.id = id

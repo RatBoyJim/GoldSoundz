@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Gold Soundz</title>
 </head>
+<header>
+    <h1>Gold Soundz</h1>
+        <ul>
+            <li><a href="/albums">Albums</a></li>
+            <li><a href="/labels">Labels</a></li>
+        </ul>
+    <section id="employee">
+        <img src="static/images/Barry.png" alt="Picture of employee" style="width:150px;height:100px;">
+        <p>Barry</p>
+    </section>
+    
+    
+</header>
 <body>
-    <a href="/albums">Albums</a>
-    <a href="/labels">Labels</a>
     <section id="content">
         {% block content %}
   
