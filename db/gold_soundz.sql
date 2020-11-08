@@ -16,5 +16,5 @@ CREATE TABLE albums (
     cost FLOAT,
     sell_price FLOAT,
     genre VARCHAR(255),
-    label_id INT REFERENCES labels(id)
+    label_id INT REFERENCES labels(id) ON DELETE CASCADE
 );

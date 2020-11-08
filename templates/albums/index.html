@@ -4,6 +4,9 @@
 {% block content %}
 
 {% for album in albums %}
+<div class="task">
+    <div class="content">
+      {{album.title}}
     <li>Title</li>
     <p>{{ album.title }}</p>
     <p>Artist</p>
@@ -20,6 +23,18 @@
     <p>{{ album.label.id }}</p>
     <p>Album ID</p>
     <p>{{ album.id }}</p>
+    </div>
+    <div class="buttons">
+        <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
+            <a href="/albums/{{album.id}}/delete">Delete</a>
+          </form> 
+        {% if album.amount_units > album.ideal_units %}
+          <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        {% else %}
+          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        {% endif %}
+</div>
+</div>
 {% endfor %}
 </div>
 
