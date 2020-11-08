@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 
-<div>
 {% block content %}
 
-{% for album in albums %}
 <div class="task">
     <div class="content">
       {{album.title}}
@@ -37,7 +35,6 @@
         {% endif %}
 </div>
 </div>
-{% endfor %}
 </div>
 
 {% endblock %}

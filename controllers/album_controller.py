@@ -40,7 +40,7 @@ def albums():
     albums = album_repository.select_all()
     return render_template("albums/index.html", albums = albums)
 
-@albums_blueprint.route("/albums/<id>")
+@albums_blueprint.route("/albums/<id>/show")
 def show(id):
     album = album_repository.select(id)
     return render_template("albums/show.html", album = album)

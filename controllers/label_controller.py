@@ -35,7 +35,7 @@ def labels():
     labels = label_repository.select_all()
     return render_template("labels/index.html", labels = labels)
 
-@labels_blueprint.route("/labels/<id>")
+@labels_blueprint.route("/labels/<id>/show")
 def show(id):
     label = label_repository.select(id)
     return render_template("labels/show.html", label = label)

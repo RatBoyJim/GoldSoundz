@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <li>{{ label.name }}</li>
+    <li>{{ label.email }}</li>
+    <br>
+    <br>
+<p><a href="/labels/new">Create a new label</a></p>
+<p><a href="/labels/{{label.id}}/show">View label details</a></p>
+<p><a href="/labels/{{label.id}}/edit">Edit label details</a></p>
+<p><a href="/labels/{{label.id}}/delete">Delete label details</a></p>
+
+{% endblock %}
