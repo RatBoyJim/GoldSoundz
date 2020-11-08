@@ -43,6 +43,7 @@ def update(album):
     values = [album.title, album.artist, album.amount_units, album.ideal_units, album.cost, album.sell_price, album.genre, album.label.id]
     run_sql(sql, values)
 
+
 def delete_all():
     sql = "DELETE  FROM albums"
     run_sql(sql)
