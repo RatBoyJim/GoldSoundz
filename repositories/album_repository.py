@@ -50,6 +50,6 @@ def delete_all():
 
 def delete(id):
     sql = 'DELETE  FROM tasks WHERE id = %s'
-    values= [id]
+    values = [id]
     run-sql(sql, values)
 

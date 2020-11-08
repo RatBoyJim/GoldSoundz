@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/labels" method="POST">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Name of the label" required autofocus>
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Label's contact email" required>
+    </div>
+    <button type="Submit">Add Label</button>
+</form>
+
+{% endblock content %}
