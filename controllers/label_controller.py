@@ -55,14 +55,14 @@ def update_label(id):
     name = request.form["name"]
     email = request.form["email"]
 
-    label_update = Label(name, email)
+    label_update = Label(name, email, id)
     label_repository.update(label_update)
     return redirect('/labels')
 
 
 #DELETE
 
-@labels_blueprint.route("/labels/<id>/delete", methods = ["POST"])
+@labels_blueprint.route("/labels/<id>/delete", methods=["GET"])
 def delete_label(id):
     label_repository.delete(id)
     return redirect('/labels')

@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="/albums" method="POST">
+<form action="/albums/{{album.id}}" method="POST">
     <div>
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" value="{{album.title}}" required autofocus>
@@ -17,7 +17,7 @@
     </div>
     <div>
         <label for="ideal_units">Ideal amount of units:</label>
-        <input type="number" name="ideal_units" id="amount_units" value="{{album.ideal_units}}" required>
+        <input type="number" name="ideal_units" id="ideal_units" value="{{album.ideal_units}}" required>
     </div>
     <div>
         <label for="cost">Cost per album:</label>
@@ -36,7 +36,7 @@
         <select id="label_id" name="label_id">
           {% for label in labels %}
             <option value="{{ label.id }}"
-              {% if album.label.id== label.id %} selected="selected"{% endif %}>
+              {% if album.label.id == label.id %} selected="selected"{% endif %}>
               {{ label.name }}
             </option>
           {% endfor %}

@@ -25,9 +25,11 @@
     <p>{{ album.id }}</p>
     </div>
     <div class="buttons">
-        <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
+            <a href="/albums/new">Create new album entry</a>
             <a href="/albums/{{album.id}}/delete">Delete</a>
-          </form> 
+            <a href="/albums/{{album.id}}/edit">Edit</a>
+            <a href="/albums/{{album.id}}/show">Review</a>
+          </form>
         {% if album.amount_units > album.ideal_units %}
           <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
         {% else %}

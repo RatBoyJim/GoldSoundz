@@ -54,8 +54,6 @@ def edit_album(id):
     return render_template("albums/edit.html", album = album, labels = labels)
 
 
-#UPDATE
-
 @albums_blueprint.route("/albums/<id>", methods = ["POST"])
 def update_album(id):
     title = request.form["title"]
@@ -75,7 +73,7 @@ def update_album(id):
 
 #DELETE
 
-@albums_blueprint.route("/albums/<id>/delete", methods=["POST"])
+@albums_blueprint.route("/albums/<id>/delete", methods=["GET"])
 def delete_album(id):
     album_repository.delete(id)
     return redirect('/albums')

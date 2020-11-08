@@ -39,7 +39,7 @@ def select(id):
 
 def update(label):
     sql = "UPDATE labels SET (name, email) = (%s, %s) WHERE id = %s"
-    values = [label.first_name, label.email, label.id]
+    values = [label.name, label.email, label.id]
     run_sql(sql, values)
 
 
@@ -49,6 +49,6 @@ def delete_all():
 
 
 def delete(id):
-    sql = 'DELETE  FROM tasks WHERE id = %s'
+    sql = 'DELETE  FROM labels WHERE id = %s'
     values= [id]
-    run-sql(sql, values)
+    run_sql(sql, values)

@@ -39,8 +39,8 @@ def select(id):
     return album
 
 def update(album):
-    sql = "UPDATE albums SET (title, artist, amount_units, ideal_units, cost, sell_price, genre, label_id) VALUES (%s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [album.title, album.artist, album.amount_units, album.ideal_units, album.cost, album.sell_price, album.genre, album.label.id]
+    sql = "UPDATE albums SET (title, artist, amount_units, ideal_units, cost, sell_price, genre, label_id) = (%s, %s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [album.title, album.artist, album.amount_units, album.ideal_units, album.cost, album.sell_price, album.genre, album.label.id, album.id]
     run_sql(sql, values)
 
 
@@ -49,7 +49,7 @@ def delete_all():
     run_sql(sql)
 
 def delete(id):
-    sql = 'DELETE  FROM tasks WHERE id = %s'
+    sql = 'DELETE  FROM albums WHERE id = %s'
     values = [id]
-    run-sql(sql, values)
+    run_sql(sql, values)
 
