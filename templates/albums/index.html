@@ -15,10 +15,12 @@
         <p> {label.name}} </p>
       {% endif %} 
     {% endfor %}
-    <a href="/albums/new">Create new album entry</a>
-    <a href="/albums/{{album.id}}/delete">Delete</a>
-    <a href="/albums/{{album.id}}/edit">Edit</a>
     <a href="/albums/{{album.id}}/show">Review</a>
+    <a href="/albums/{{album.id}}/edit">Edit</a>
+    <a href="/albums/{{album.id}}/delete">Delete</a>
+    <br>
+    <br>
+    <section class=stock-info>
     {% if album.amount_units >= album.ideal_units %}
       <p>Stock fine</p>
     {% elif album.amount_units == 0 %}
@@ -26,6 +28,7 @@
     {% elif album.amount_units < album.ideal_units %}
       <p>Low stock!</p>
     {% endif %}
+    </section>
 </div>
 </div>
 {% endfor %}

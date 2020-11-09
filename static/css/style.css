@@ -47,6 +47,29 @@ header > ul > li > a:link {
   margin-bottom: 10px;
   }
 
+.album-container > img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.album-container > p {
+  text-align: left;
+  line-height: 5px;
+  margin: 10px;
+  padding-bottom: 15px;
+  }
+
+.album-container > h4 {
+  margin: 5px;
+  line-height: 5px;
+  padding-top: 5px;
+}
+
+.stock-info {
+  justify-content: baseline;
+}
+
+
 .label-container {
   display: flex;
   flex-direction: column;
