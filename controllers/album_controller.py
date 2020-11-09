@@ -85,3 +85,15 @@ def delete_album(id):
 def artist_albums(artist):
     albums = album_repository.albums(artist)
     return render_template('albums/artist-albums.html', albums = albums)
+
+
+@albums_blueprint.route("/albums/artist")
+def get_artist():
+    albums = album_repository.select_all()
+    return render_template("albums/albums-artist.html", albums = albums)
+
+@albums_blueprint.route("/albums/artist-albums", methods=['POST'])
+def show_albums():
+    artist = request.form[artist]
+    albums = album_repository.albums(artist)
+    return render_template('/albums/artist-albums.html', albums=albums)
