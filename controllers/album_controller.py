@@ -77,3 +77,11 @@ def update_album(id):
 def delete_album(id):
     album_repository.delete(id)
     return redirect('/albums')
+
+
+#OTHER STUFF
+
+@albums_blueprint.route("/albums/<artist>")
+def artist_albums(artist):
+    albums = album_repository.albums(artist)
+    return render_template('albums/artist-albums.html', albums = albums)

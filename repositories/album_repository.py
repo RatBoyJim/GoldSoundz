@@ -53,3 +53,17 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+
+def albums(artist):
+    albums = []
+
+    sql = 'SELECT * FROM albums WHERE artist = %s'
+    values = [artist]
+    results = run_sql(sql)
+
+    for row in results:
+        label = label_repository.select(row['label_id'])
+        album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
+        albums.append(album)
+    return albums
+
