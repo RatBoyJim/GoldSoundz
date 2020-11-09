@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<section class=label-container>
     <li>{{ label.name }}</li>
     <li>{{ label.email }}</li>
     <br>
     <br>
-<p><a href="/labels/new">Create a new label</a></p>
-<p><a href="/labels/{{label.id}}/show">View label details</a></p>
-<p><a href="/labels/{{label.id}}/edit">Edit label details</a></p>
-<p><a href="/labels/{{label.id}}/delete">Delete label details</a></p>
-
+<a href="/labels">View all labels</a>
+<a href="/labels/{{label.id}}/edit">Edit label details</a>
+<a href="/labels/{{label.id}}/delete">Delete label details</a>
+</section>
 {% endblock %}

@@ -2,37 +2,39 @@
 
 {% block content %}
 
-<div class="task">
-    <div class="content">
-      {{album.title}}
-    <li>Title</li>
-    <p>{{ album.title }}</p>
-    <p>Artist</p>
-    <p>{{ album.artist }}</p>
-    <p>Amount of units in stock</p>
-    <p>{{ album.amount_units }}</p>
-    <p>Ideal number of units</p>
-    <p>{{ album.ideal_units }}</p>
-    <p>Buy-in cost</p>
-    <p>{{ album.cost }}</p>
-    <p>Selling price</p>
-    <p>{{ album.sell_price }}</p>
-    <p>Label ID</p>
-    <p>{{ album.label.id }}</p>
-    <p>Album ID</p>
-    <p>{{ album.id }}</p>
-    </div>
-    <div class="buttons">
-            <a href="/albums/new">Create new album entry</a>
-            <a href="/albums/{{album.id}}/delete">Delete</a>
-            <a href="/albums/{{album.id}}/edit">Edit</a>
-            <a href="/albums/{{album.id}}/show">Review</a>
-          </form>
-        {% if album.amount_units > album.ideal_units %}
-          <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-        {% else %}
-          <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-        {% endif %}
+<div class="album-container">
+  <img src="{{ url_for('static', filename='images/{}.jpeg'.format(album.title)) }}" alt="Picture of album cover">
+  <h4>Title</h4>
+  <p>{{ album.title }}</p>
+  <h4>Artist</h4>
+  <p>{{ album.artist }}</p>
+  <h4>Amount of units in stock</h4>
+  <p>{{ album.amount_units }}</p>
+  <h4>Ideal number of units</h4>
+  <p>{{ album.ideal_units }}</p>
+  <h4>Buy-in cost</h4>
+  <p>{{ album.cost }}</p>
+  <h4>Selling price</h4>
+  <p>{{ album.sell_price }}</p>
+  <h4>Label ID</h4>
+  <p>{{ album.label.id }}</p>
+  <h4>Album ID</h4>
+  <p>{{ album.id }}</p>
+  <br>
+  <a href="/albums">Album Inventory</a>
+  <a href="/albums/{{album.id}}/edit">Edit</a>
+  <a href="/albums/{{album.id}}/delete">Delete</a>
+  <br>
+  <br>
+  <section class=stock-info>
+  {% if album.amount_units >= album.ideal_units %}
+    <p>Stock fine</p>
+  {% elif album.amount_units == 0 %}
+    <p>Out of stock!</p>
+  {% elif album.amount_units < album.ideal_units %}
+    <p>Low stock!</p>
+  {% endif %}
+  </section>
 </div>
 </div>
 </div>
