@@ -21,38 +21,49 @@ header > h1 {
 
 header > ul {
     display: flex;
+    align-items: center;
     justify-content: flex-end;
     flex-direction: column;
     list-style-type: none;
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
-header > nav > ul > li {
-    margin: 10px;
-    padding: 0;
-  }
   
-header > nav > ul > li > a {
-    
-    text-decoration-color: gold;
+header > ul > li > a:link {
+    text-decoration: none;
+    color: white;
   }
 
 
-
-.album {
-    display: flex;
-    flex-direction: row;
-    border: 5px solid gold;
-    width: 300px;
-    min-height: 68px;
-    padding: 10px;
-    line-height: 18px;
-    margin-bottom: 10px;
+.album-container {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid gold;
+  max-width: 300px;
+  min-height: 68px;
+  padding: 10px;
+  line-height: 18px;
+  margin-bottom: 10px;
   }
 
-  .buttons {
-    margin-top: 10px;
-    margin-left: 2px;
-    font-size: 1.4em;
-    color: #aab8c2;
+.label-container {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid gold;
+  max-width: 200px;
+  min-height: 68px;
+  padding: 10px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
   }
 
+#form {
+  display: flex;
+  flex-direction: column;
+}

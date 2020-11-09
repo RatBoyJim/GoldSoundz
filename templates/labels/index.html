@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-<div>
 {% block content %}
 
 {% for label in labels %}
+<section class=label-container>
     <li>{{ label.name }}</li>
     <li>{{ label.email }}</li>
     <br>
@@ -12,7 +12,8 @@
 <p><a href="/labels/{{label.id}}/show">View label details</a></p>
 <p><a href="/labels/{{label.id}}/edit">Edit label details</a></p>
 <p><a href="/labels/{{label.id}}/delete">Delete label details</a></p>
+</section>
 {% endfor %}
-</div>
+
 
 {% endblock %}
