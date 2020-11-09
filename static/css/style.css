@@ -1,10 +1,20 @@
 header {
     background-color: black;
-    color: white;
+    color: gold;
+    display: flex;
+    justify-content: space-between;
 }
 
+#employee {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
 header > h1 {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
 }
@@ -13,26 +23,22 @@ header > ul {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
+    list-style-type: none;
 }
 
 header > nav > ul > li {
-    list-style-type: none;
     margin: 10px;
     padding: 0;
   }
   
-  header > nav > ul > li > a {
-    text-decoration: none;
-    color: gold;
+header > nav > ul > li > a {
+    
+    text-decoration-color: gold;
   }
 
-header > section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
 
-.task {
+
+.album {
     display: flex;
     flex-direction: row;
     border: 5px solid gold;
