@@ -22,7 +22,7 @@ def create_label():
     email = request.form["email"]
     active = request.form["active"]
 
-    new_label = Label(name, email)
+    new_label = Label(name, email, active)
     label_repository.save(new_label)
     return redirect('/labels')
 
@@ -56,8 +56,9 @@ def edit_label(id):
 def update_label(id):
     name = request.form["name"]
     email = request.form["email"]
+    active = request.form["active"]
 
-    label_update = Label(name, email, id)
+    label_update = Label(name, email, active, id)
     label_repository.update(label_update)
     return redirect('/labels')
 

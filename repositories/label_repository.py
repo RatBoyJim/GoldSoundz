@@ -6,8 +6,8 @@ from models.label import Label
 import repositories.album_repository as album_repository
 
 def save(label):
-    sql = "INSERT INTO labels (name, email) VALUES (%s, %s) RETURNING *"
-    values = [label.name, label.email]
+    sql = "INSERT INTO labels (name, email, active) VALUES (%s, %s, %s) RETURNING *"
+    values = [label.name, label.email, label.active]
     results = run_sql(sql, values)
     id = results[0]['id']
     label.id = id
@@ -21,7 +21,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        label = Label(row['name'], row['email'], row['id'] )
+        label = Label(row['name'], row['email'], row['active'], row['id'] )
         labels.append(label)
     return labels
 
@@ -33,13 +33,13 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        label = Label(result['name'], result['email'], result['id'])
+        label = Label(result['name'], result['email'], result['active'], result['id'])
     return label
 
 
 def update(label):
-    sql = "UPDATE labels SET (name, email) = (%s, %s) WHERE id = %s"
-    values = [label.name, label.email, label.id]
+    sql = "UPDATE labels SET (name, email, active) = (%s, %s, %s) WHERE id = %s"
+    values = [label.name, label.email, label.active, label.id]
     run_sql(sql, values)
 
 
