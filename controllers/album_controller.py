@@ -44,6 +44,7 @@ def albums():
 def show(id):
     labels = label_repository.select_all()
     album = album_repository.select(id)
+    #genres = get_unique_genre_from_albums(albums)
     return render_template("albums/show.html", album = album, labels = labels)
 
 #UPDATE
@@ -92,3 +93,4 @@ def artist_albums(artist):
 def albums_by_genre(genre):
     albums = album_repository.albums_genre(genre)
     return render_template('/albums/albums-by-genre.html', albums = albums)
+

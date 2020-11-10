@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<div class="albums-container">
+
 {% for album in albums %}
 <div class="album-container">
     <img src="{{ url_for('static', filename='images/{}.jpeg'.format(album.title)) }}" alt="Picture of album cover">
@@ -31,7 +33,6 @@
       <p>Low stock!</p>
     {% endif %}
     </section>
-</div>
 </div>
 {% endfor %}
 </div>

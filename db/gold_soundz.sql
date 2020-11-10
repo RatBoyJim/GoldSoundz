@@ -4,7 +4,8 @@ DROP TABLE labels;
 CREATE TABLE labels (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    email VARCHAR(255)
+    email VARCHAR(255),
+    active BOOLEAN
 );
 
 CREATE TABLE albums (

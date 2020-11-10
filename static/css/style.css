@@ -48,6 +48,12 @@ body {
   background-color: cornsilk;
 }
 
+.albums-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .album-container {
   display: flex;
   flex-direction: column;

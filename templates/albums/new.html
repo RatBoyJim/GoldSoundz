@@ -40,7 +40,12 @@
         <select name="label_id" id="label_id">
             <option value="holder" hidden selected disabled>Choose Option</option>
             {% for label in labels %}
-                <option value="{{label.id}}">{{label.name}}</option>
+            {% if label.active == True %}
+            <option value="{{label.id}}">{{label.name}}</option>
+          {% else %}
+            <option value = "empty">Can't add defunct label</option>
+          {% endif %}
+                
             {% endfor %}
         </select>
     </div>

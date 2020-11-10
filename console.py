@@ -5,12 +5,12 @@ from models.label import Label
 import repositories.album_repository as album_repository
 import repositories.label_repository as label_repository
 
-# album_repository.delete_all()
-# label_repository.delete_all()
+album_repository.delete_all()
+label_repository.delete_all()
 
-label1 = Label("Matador", "sales@matador.com")
+label1 = Label("Matador", "sales@matador.com", True)
 label_repository.save(label1)
-label2 = Label("4AD", "sales@4ad.com")
+label2 = Label("4AD", "sales@4ad.com", True)
 label_repository.save(label2)
 
 label_repository.select_all()

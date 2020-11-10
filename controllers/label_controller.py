@@ -20,6 +20,7 @@ def new_label():
 def create_label():
     name = request.form["name"]
     email = request.form["email"]
+    active = request.form["active"]
 
     new_label = Label(name, email)
     label_repository.save(new_label)

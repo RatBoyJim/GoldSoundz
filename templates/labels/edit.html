@@ -11,6 +11,13 @@
         <label for="email">Email:</label>
         <input type="text" name="email" id="email" value="{{label.email}}" required>
     </div>
-      <button type="submit">Update Label</button>
-    </form>
-    {% endblock %}
+    <div>
+        <label for="active">Is label still active?:</label>
+        <select id="active" name="active">
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+    </div>
+    <button type="submit">Update Label</button>
+</form>
+{% endblock %}
