@@ -1,6 +1,16 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<a href="/albums/new">Create new album entry</a>
-<a href="/labels/new">Create a new label</a>
+
+{% for album in albums %}
+{% if album.amount_units == 0 %}
+<p>OUT OF STOCK ALERT</p> 
+{% endif %}
+{% endfor %}
+
+<a class="index-album-container" href="/albums"><img src="{{ url_for('static', filename='images/records.jpeg') }}" alt="A picture of a stack of records" style="width:200px;height:200px;">View all albums</a>
+<a class="index-album-container" href="/albums/new"><img src="{{ url_for('static', filename='images/add_album.jpeg') }}" alt="A picture of a record with a plus sign" style="width:200px;height:200px;">Add new album</a>
+
+<a class="index-label-container" href="/labels"><img src="{{ url_for('static', filename='images/labels.jpeg') }}" alt="A picture of various record labels" style="width:200px;height:200px;">View all labels</a>
+<a class="index-label-container" href="/labels/new"><img src="{{ url_for('static', filename='images/plus.png') }}" alt="A picture of a plus sign" style="width:200px;height:200px;">Add new label</a>
 {% endblock content %}
