@@ -79,3 +79,17 @@ def albums_genre(genre):
         album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
         albums.append(album)
     return albums
+
+def out_of_cream():
+    albums = []
+
+    sql = 'SELECT * FROM albums WHERE amount_units = %s'
+    values = [0]
+    results = run_sql(sql, values)
+
+    for row in results:
+        label = label_repository.select(row['label_id'])
+        album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
+        albums.append(album)
+    return albums
+

@@ -94,3 +94,9 @@ def albums_by_genre(genre):
     albums = album_repository.albums_genre(genre)
     return render_template('/albums/albums-by-genre.html', albums = albums)
 
+
+@albums_blueprint.route("/oos")
+def out_of_stock():
+    labels = label_repository.select_all()
+    albums = album_repository.out_of_cream()
+    return render_template('/albums/oos-albums.html', albums = albums, labels = labels)

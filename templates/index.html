@@ -4,7 +4,7 @@
 
 {% for album in albums %}
 {% if album.amount_units == 0 %}
-<p>OUT OF STOCK ALERT</p> 
+<p><a class="warning" href="/oos"><img src="{{ url_for('static', filename='images/gd warning.png') }}" alt="A picture of warning sign"></a></p> 
 {% endif %}
 {% endfor %}
 
