@@ -67,3 +67,15 @@ def albums(artist):
         albums.append(album)
     return albums
 
+def albums_genre(genre):
+    albums = []
+
+    sql = 'SELECT * FROM albums WHERE genre = %s'
+    values = [genre]
+    results = run_sql(sql, values)
+
+    for row in results:
+        label = label_repository.select(row['label_id'])
+        album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
+        albums.append(album)
+    return albums

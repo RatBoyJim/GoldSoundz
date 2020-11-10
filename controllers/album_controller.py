@@ -42,8 +42,9 @@ def albums():
 
 @albums_blueprint.route("/albums/<id>/show")
 def show(id):
+    labels = label_repository.select_all()
     album = album_repository.select(id)
-    return render_template("albums/show.html", album = album)
+    return render_template("albums/show.html", album = album, labels = labels)
 
 #UPDATE
 
@@ -81,19 +82,13 @@ def delete_album(id):
 
 #OTHER STUFF
 
-@albums_blueprint.route("/albums/<artist>")
+@albums_blueprint.route("/albums/artist/<artist>")
 def artist_albums(artist):
     albums = album_repository.albums(artist)
     return render_template('albums/artist-albums.html', albums = albums)
 
 
-@albums_blueprint.route("/albums/artist")
-def get_artist():
-    albums = album_repository.select_all()
-    return render_template("albums/albums-artist.html", albums = albums)
-
-@albums_blueprint.route("/albums/artist-albums", methods=['POST'])
-def show_albums():
-    artist = request.form['artist']
-    albums = album_repository.albums(artist)
-    return render_template('/albums/artist-albums.html', albums=albums)
+@albums_blueprint.route("/albums/genre/<genre>")
+def albums_by_genre(genre):
+    albums = album_repository.albums_genre(genre)
+    return render_template('/albums/albums-by-genre.html', albums = albums)

@@ -16,6 +16,16 @@
   <p>{{ album.cost }}</p>
   <h4>Selling price</h4>
   <p>{{ album.sell_price }}</p>
+  <h4>Markup</h4>
+  <p>{{album.markup(album)}}%</p>
+  <h4>Label</h4>
+  {% for label in labels %}
+    {% if label.id == album.label.id %}
+      <p>{{label.name}}</p>
+    {% endif %}
+  {% endfor %}
+  <br>
+  <br>
   <h4>Label ID</h4>
   <p>{{ album.label.id }}</p>
   <h4>Album ID</h4>

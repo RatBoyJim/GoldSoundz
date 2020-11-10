@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.label import Label
 import repositories.label_repository as label_repository
+import repositories.album_repository as album_repository
 
 labels_blueprint = Blueprint("labels", __name__)
 
@@ -66,3 +67,12 @@ def update_label(id):
 def delete_label(id):
     label_repository.delete(id)
     return redirect('/labels')
+
+
+#OTHER STUFF
+
+@labels_blueprint.route("/labels/<id>")
+def label_artists(id):
+    album = album_repository.select_all()
+    label = label_repository.select(id)
+    return render_template('labels/label-artists', albums = albums, label = label)
