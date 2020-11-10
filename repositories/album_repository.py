@@ -59,7 +59,7 @@ def albums(artist):
 
     sql = 'SELECT * FROM albums WHERE artist = %s'
     values = [artist]
-    results = run_sql(sql)
+    results = run_sql(sql, values)
 
     for row in results:
         label = label_repository.select(row['label_id'])

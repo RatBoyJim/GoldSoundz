@@ -94,6 +94,6 @@ def get_artist():
 
 @albums_blueprint.route("/albums/artist-albums", methods=['POST'])
 def show_albums():
-    artist = request.form[artist]
+    artist = request.form['artist']
     albums = album_repository.albums(artist)
     return render_template('/albums/artist-albums.html', albums=albums)
