@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<div class="labels-container">
+
 {% for label in labels %}
 <section class=label-container>
     <li>{{ label.name }}</li>
@@ -27,6 +29,7 @@
 </section>
 {% endfor %}
 
+</div>
 
 {% endblock %}
 

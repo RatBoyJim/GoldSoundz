@@ -144,12 +144,17 @@ body {
   justify-content: baseline;
 }
 
+.labels-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .label-container {
   display: flex;
   flex-direction: column;
   border: 5px solid gold;
-  max-width: 200px;
+  max-width: 250px;
   min-height: 68px;
   padding: 10px;
   line-height: 18px;
