@@ -100,3 +100,20 @@ def out_of_stock():
     labels = label_repository.select_all()
     albums = album_repository.out_of_cream()
     return render_template('/albums/oos-albums.html', albums = albums, labels = labels)
+
+@albums_blueprint.route("/albums/inventory")
+def inventory():
+    labels = label_repository.select_all()
+    albums = album_repository.select_all()
+    return render_template('/albums/inventory.html', albums = albums, labels = labels)
+
+@albums_blueprint.route("/albums/search-by-name")
+def name_search():
+    return render_template('albums/search-by-name.html')
+
+@albums_blueprint.route("/albums/results", methods = ["POST"])
+def search_results():
+    title = request.form["title"]
+    labels = label_repository.select_all()
+    albums = album_repository.find_by_name(title)
+    return render_template('/albums/results.html', albums = albums)

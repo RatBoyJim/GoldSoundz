@@ -14,7 +14,7 @@
     <p>{{ album.artist }}</p>
     {% for label in labels %}
       {% if label.id == album.label.id %}
-        <p> {label.name}} </p>
+        <p> {{label.name}} </p>
       {% endif %} 
     {% endfor %}
     <a href="/albums/{{album.id}}/show">Review</a>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/albums/results" method="POST">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" placeholder="Title of album" required autofocus>
+    </div>
+
+    <button type="Submit">Search</button>
+
+</form>
+
+    
+{% endblock content %}

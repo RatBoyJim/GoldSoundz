@@ -1,16 +1,18 @@
 {% extends 'base.html'%}
-
+<section class="home">
 {% block content %}
 
 {% for album in albums %}
 {% if album.amount_units == 0 %}
-<p><a class="warning" href="/oos"><img src="{{ url_for('static', filename='images/gd warning.png') }}" alt="A picture of warning sign"></a></p> 
+<p class="warning"><a href="/oos"><img src="{{ url_for('static', filename='images/gd warning.png') }}" alt="A picture of warning sign" style="width:100px;height:100px;"></a></p> 
 {% endif %}
 {% endfor %}
 
 <a class="index-album-container" href="/albums"><img src="{{ url_for('static', filename='images/records.jpeg') }}" alt="A picture of a stack of records" style="width:200px;height:200px;">View all albums</a>
 <a class="index-album-container" href="/albums/new"><img src="{{ url_for('static', filename='images/add_album.jpeg') }}" alt="A picture of a record with a plus sign" style="width:200px;height:200px;">Add new album</a>
+<a class="index-album-container" href="/albums/search-by-name">Search for an Album</a>
 
-<a class="index-label-container" href="/labels"><img src="{{ url_for('static', filename='images/labels.jpeg') }}" alt="A picture of various record labels" style="width:200px;height:200px;">View all labels</a>
+<a class="index-label-container" href="/labels"><img src="{{ url_for('static', filename='images/labels.jpeg') }}" alt="A picture of various record labels" style="width:200px;height:200px;">View all labels</a> 
 <a class="index-label-container" href="/labels/new"><img src="{{ url_for('static', filename='images/plus.png') }}" alt="A picture of a plus sign" style="width:200px;height:200px;">Add new label</a>
+</section>
 {% endblock content %}

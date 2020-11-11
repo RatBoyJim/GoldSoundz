@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section class="single">
+
+{% for album in albums %}
+    
 <div class="album-container">
   <img src="{{ url_for('static', filename='images/{}.jpeg'.format(album.title)) }}" alt="Picture of album cover">
   <h4>Title</h4>
@@ -47,6 +49,7 @@
   </section>
 </section>
 </div>
+{% endfor %}
 </div>
 </div>
 

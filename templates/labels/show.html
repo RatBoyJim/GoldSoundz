@@ -4,6 +4,11 @@
 <section class=label-container>
     <li>{{ label.name }}</li>
     <li>{{ label.email }}</li>
+    {% if label.active == True %}
+        <p>Label: Active</p>
+    {% else %}
+        <p>Label: Defunct</p>
+    {% endif %}
     <br>
     <br>
 <a href="/labels">View all labels</a>

@@ -3,21 +3,41 @@
 
 {% block content %}
 
+<div class="albums-container">
+
 {% for album in albums %}
 <div class="album-container">
     <img src="{{ url_for('static', filename='images/{}.jpeg'.format(album.title)) }}" alt="Picture of album cover">
     <h4>Title</h4>
-    <p>{{ album.title }}</p>
-    <h4>Artist</h4>
-    <p>{{ album.artist }}</p>
-    {% for label in labels %}
-      {% if label.id == album.label.id %}
-        <p> {{label.name}} </p>
-      {% endif %} 
-    {% endfor %}
+  <p>{{ album.title }}</p>
+  <h4>Artist</h4>
+  <p>{{ album.artist }}</p>
+  <h4>Amount of units in stock</h4>
+  <p>{{ album.amount_units }}</p>
+  <h4>Ideal number of units</h4>
+  <p>{{ album.ideal_units }}</p>
+  <h4>Buy-in cost</h4>
+  <p>{{ album.cost }}</p>
+  <h4>Selling price</h4>
+  <p>{{ album.sell_price }}</p>
+  <h4>Markup</h4>
+  <p>{{ album.markup(album) }}%</p>
+  <h4>Label</h4>
+  {% for label in labels %}
+    {% if label.id == album.label.id %}
+      <p>{{label.name}}</p>
+      <p>{{label.email}}</p>
+      {% if label.active == True %}
+      <p>Label: Active</p>
+  {% else %}
+      <p>Label: Defunct</p>
+  {% endif %}
+    {% endif %}
+  {% endfor %}
     <a href="/albums/{{album.id}}/show">Review</a>
     <a href="/albums/{{album.id}}/edit">Edit</a>
     <a href="/albums/{{album.id}}/delete">Delete</a>
+    <a href="/albums/artist/{{album.artist}}">View all albums by this artist</a>
     <a href="/albums/genre/{{album.genre}}">View all albums by genre</a>
     <br>
     <br>
@@ -32,6 +52,6 @@
     </section>
 </div>
 {% endfor %}
-
+</div>
 
 {% endblock %}
