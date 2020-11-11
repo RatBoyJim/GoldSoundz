@@ -34,8 +34,9 @@ def create_label():
 
 @labels_blueprint.route("/labels")
 def labels():
+    albums = album_repository.select_all()
     labels = label_repository.select_all()
-    return render_template("labels/index.html", labels = labels)
+    return render_template("labels/index.html", labels = labels, albums = albums)
 
 @labels_blueprint.route("/labels/<id>/show")
 def show(id):

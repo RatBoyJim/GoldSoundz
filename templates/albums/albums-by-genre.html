@@ -22,14 +22,14 @@
     <br>
     <br>
     <section class=stock-info>
-    {% if album.amount_units >= album.ideal_units %}
-      <p>Stock fine</p>
-    {% elif album.amount_units == 0 %}
-      <p>Out of stock!</p>
-    {% elif album.amount_units < album.ideal_units %}
-      <p>Low stock!</p>
-    {% endif %}
-    </section>
+        {% if album.amount_units >= album.ideal_units %}
+          <p>Stock fine</p><i class="fas fa-check"></i>
+        {% elif album.amount_units == 0 %}
+          <p>Out of stock!</p><i class="fas fa-times"></i>
+        {% elif album.amount_units < album.ideal_units %}
+          <p>Low stock!</p><i class="fas fa-exclamation-triangle"></i>
+        {% endif %}
+        </section>
 </div>
 </div>
 {% endfor %}

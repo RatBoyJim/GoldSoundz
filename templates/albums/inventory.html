@@ -43,11 +43,11 @@
     <br>
     <section class=stock-info>
     {% if album.amount_units >= album.ideal_units %}
-      <p>Stock fine</p>
+      <p>Stock fine</p><i class="fas fa-check"></i>
     {% elif album.amount_units == 0 %}
-      <p>Out of stock!</p>
+      <p>Out of stock!</p><i class="fas fa-times"></i>
     {% elif album.amount_units < album.ideal_units %}
-      <p>Low stock!</p>
+      <p>Low stock!</p><i class="fas fa-exclamation-triangle"></i>
     {% endif %}
     </section>
 </div>

@@ -13,6 +13,14 @@
     {% endif %}
     <br>
     <br>
+    <p>Albums provided:</p>
+    {% for album in albums %}
+    {% if album.label.id == label.id %}
+        <li><a href="/albums/{{album.id}}/show">{{ album.title }}</a></li>
+    {% endif %}
+{% endfor %}
+<br>
+<br>
 <a href="/labels/{{label.id}}/show">Review label details</a>
 <a href="/labels/{{label.id}}/edit">Edit label details</a>
 <a href="/labels/{{label.id}}/delete">Delete label details</a>
@@ -21,3 +29,4 @@
 
 
 {% endblock %}
+
