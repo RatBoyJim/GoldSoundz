@@ -116,4 +116,4 @@ def search_results():
     title = request.form["title"]
     labels = label_repository.select_all()
     albums = album_repository.find_by_name(title)
-    return render_template('/albums/results.html', albums = albums)
+    return render_template('/albums/results.html', albums = albums, labels = labels)
