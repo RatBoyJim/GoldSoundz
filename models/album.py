@@ -11,6 +11,7 @@ class Album:
         self.label = label
         self.id = id
 
+
     def markup(self, album):
         markup = ((self.sell_price - self.cost) / self.cost) * 100
         return markup
