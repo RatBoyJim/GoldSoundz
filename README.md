@@ -9,22 +9,15 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 ![GoldSoundz Logo](static/images/vinyl.png)
 Format: ![Alt Text](url)
 
-### Markdown
+### MVP
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
+* The inventory should track individual products, including a name, description, stock quantity, buying cost, and selling price
+* The inventory should track manufacturers, including a name and any other appropriate details
+* The shop can sell anything you like, but you should be able to create and edit manufacturers and products separately
+* This might mean that it makes more sense for a car shop to track makes and models of cars. Or a bookstore might sell books by author, or by publisher, and not by manufacturer
+* You are free to name classes and tables as appropriate to your project
+* Show an inventory page, listing all the details for all the products in stock in a single view
+* As well as showing stock quantity as a number, the app should visually highlight "low stock" and "out of stock" items to the user.
 
 **Bold** and _Italic_ and `Code` text
 
