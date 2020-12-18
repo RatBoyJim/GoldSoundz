@@ -6,6 +6,9 @@ Gold Soundz is a solo project developed using object oriented programming with P
 ### Brief
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers. To be completed in 1 week including presentation showcasing the final product.
 
+![GoldSoundz Logo](static/images/vinyl.png)
+Format: ![Alt Text](url)
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
