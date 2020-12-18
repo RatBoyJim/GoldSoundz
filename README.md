@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+## Gold Soundz
 
-You can use the [editor on GitHub](https://github.com/RatBoyJim/GoldSoundz/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+### Intro
+Gold Soundz is a solo project developed using object oriented programming with Python in a Test Driven Development. It was built as part of a project for the CodeClan Professional Software Development course.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Brief
+Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers. To be completed in 1 week including presentation showcasing the final product.
 
 ### Markdown
 
