@@ -7,7 +7,6 @@ Gold Soundz is a solo project developed using object oriented programming with P
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers. To be completed in 1 week including presentation showcasing the final product.
 
 ![GoldSoundz Logo](static/images/vinyl.png)
-Format: ![Alt Text](url)
 
 ### MVP
 
@@ -19,17 +18,23 @@ Format: ![Alt Text](url)
 * Show an inventory page, listing all the details for all the products in stock in a single view
 * As well as showing stock quantity as a number, the app should visually highlight "low stock" and "out of stock" items to the user.
 
+### Extensions
+
+* Calculate the markup on items in the store, and display it in the inventory
+* Filter the inventory list by manufacturer. For example, provide an option to view all books in stock by a certain author
+* Categorise your items. Books might be categorised by genre (crime, horror, romance...). Provide an option to filter the inventory list by these categories
+* Mark manufacturers as active/deactivated. Deactivated manufacturers will not appear when creating new products.
+
+### Technologies Used
+
+* Python
+* Flask
+* HTML 5 and CSS 3
+* PostgreSQL
+
+#### GitHub link
+[https://github.com/RatBoyJim/GoldSoundz]
+
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RatBoyJim/GoldSoundz/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
