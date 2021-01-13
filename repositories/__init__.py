@@ -1,2 +1,2 @@
-import album_repository
-import label_repository
+import album_repository.py
+import label_repository.py
