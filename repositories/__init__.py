@@ -1,2 +1,2 @@
-# import album_repository
-# from .label_repository import label_repository
+from .album_repository import *
+from .label_repository import *
