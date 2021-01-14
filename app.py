@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 
+import controllers
+
 from controllers.album_controller import albums_blueprint
 from controllers.label_controller import labels_blueprint
 
