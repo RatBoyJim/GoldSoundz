@@ -32,10 +32,8 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 * HTML 5 and CSS 3
 * PostgreSQL
 
-### Screenshots
-
 #### GitHub link
-[here](https://github.com/RatBoyJim/GoldSoundz)
+[https://github.com/RatBoyJim/GoldSoundz]
 
 **Bold** and _Italic_ and `Code` text
 
