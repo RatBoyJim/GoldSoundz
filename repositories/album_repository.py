@@ -1,6 +1,6 @@
 from app.db.run_sql import run_sql
 
-from app.models import *
+# from app.models import *
 
 from app.models.album import Album
 from app.models.label import Label
