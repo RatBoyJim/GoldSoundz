@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-from app import controllers
+# from app import controllers
 from app import models
 from app import repositories
 
