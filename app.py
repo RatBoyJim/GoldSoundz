@@ -1,14 +1,16 @@
 from flask import Flask, render_template
 
-import controllers
+from app import controllers
+from app import models
+from app import repositories
 
 from app.controllers.album_controller import albums_blueprint
 from app.controllers.label_controller import labels_blueprint
 
 from app.models.album import Album
-from models.label import Label
-import repositories.album_repository as album_repository
-import repositories.label_repository as label_repository
+from app.models.label import Label
+import app.repositories.album_repository as album_repository
+import app.repositories.label_repository as label_repository
 
 
 app = Flask(__name__)
