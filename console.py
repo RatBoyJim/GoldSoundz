@@ -1,9 +1,9 @@
 import pdb
-from app.models.album import Album
-from app.models.label import Label
+from models.album import Album
+from models.label import Label
 
-import app.repositories.album_repository as album_repository
-import app.repositories.label_repository as label_repository
+import repositories.album_repository as album_repository
+import repositories.label_repository as label_repository
 
 # album_repository.delete_all()
 # label_repository.delete_all()
