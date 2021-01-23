@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.album import Album
 from models.label import Label
-import repositories.album_bastard as album_repository
+import repositories.album_repo as album_repository
 import repositories.label_repository as label_repository
 
 albums_blueprint = Blueprint("albums", __name__)
