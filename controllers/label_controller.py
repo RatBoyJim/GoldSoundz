@@ -3,7 +3,7 @@ from flask import Blueprint
 
 from models.label import Label
 import repositories.label_repository as label_repository
-import repositories.album_repo as album_repository
+import repositories.album_repository as album_repository
 
 labels_blueprint = Blueprint("labels", __name__)
 
