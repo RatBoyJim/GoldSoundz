@@ -5,7 +5,7 @@ from controllers.label_controller import labels_blueprint
 
 from models.album import Album
 from models.label import Label
-import repositories.album_repository as album_repository
+import repositories.album_bastard as album_repository
 import repositories.label_repository as label_repository
 
 
