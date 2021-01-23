@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
-from models.label import Label
-import repositories.label_repository as label_repository
-import repositories.album_repository as album_repository
+
+from app.models.label import Label
+import app.repositories.label_repository as label_repository
+import app.repositories.album_repository as album_repository
 
 labels_blueprint = Blueprint("labels", __name__)
 
