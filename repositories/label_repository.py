@@ -1,9 +1,9 @@
-from app.db.run_sql import run_sql
+from db.run_sql import run_sql
 
-from app.models.album import Album
-from app.models.label import Label
+from models.album import Album
+from models.label import Label
 
-import app.repositories.album_repository as album_repository
+import repositories.album_repository as album_repository
 
 def save(label):
     sql = "INSERT INTO labels (name, email, active) VALUES (%s, %s, %s) RETURNING *"
