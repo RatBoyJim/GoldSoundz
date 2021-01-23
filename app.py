@@ -1,8 +1,8 @@
 from flask import Flask, render_template
 
-from app import controllers
-from app import models
-from app import repositories
+# from app import controllers
+# from app import models
+# from app import repositories
 
 from app.controllers.album_controller import albums_blueprint
 from app.controllers.label_controller import labels_blueprint
