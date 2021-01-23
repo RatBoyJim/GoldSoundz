@@ -64,5 +64,5 @@ def artists(id):
     for row in results:
         label = label_repository.select(row['label_id'])
         album = Album(row['title'], row['artist'], row['amount_units'], row['ideal_units'], row['cost'], row['sell_price'], row['genre'], label, row['id'])
-        albums.append(album)
-    return albums
+        artists.append(album)
+    return artists
