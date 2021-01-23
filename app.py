@@ -2,10 +2,10 @@ from flask import Flask, render_template
 
 import controllers
 
-from controllers.album_controller import albums_blueprint
-from controllers.label_controller import labels_blueprint
+from app.controllers.album_controller import albums_blueprint
+from app.controllers.label_controller import labels_blueprint
 
-from models.album import Album
+from app.models.album import Album
 from models.label import Label
 import repositories.album_repository as album_repository
 import repositories.label_repository as label_repository
