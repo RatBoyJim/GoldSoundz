@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
-from app.controllers.album_controller import albums_blueprint
-from app.controllers.label_controller import labels_blueprint
+from controllers.album_controller import albums_blueprint
+from controllers.label_controller import labels_blueprint
 
 from app.models.album import Album
 from app.models.label import Label
