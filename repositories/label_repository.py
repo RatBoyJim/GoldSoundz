@@ -3,7 +3,7 @@ from db.run_sql import run_sql
 from models.album import Album
 from models.label import Label
 
-import repositories.album_repository.py as album_repository
+import app.repositories.album_repository as album_repository
 
 def save(label):
     sql = "INSERT INTO labels (name, email, active) VALUES (%s, %s, %s) RETURNING *"
