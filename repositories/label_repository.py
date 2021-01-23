@@ -54,6 +54,7 @@ def delete(id):
     run_sql(sql, values)
 
 def artists(id):
+    import repositories.album_repository as album_repository
     artists = []
 
     sql = 'SELECT artist FROM albums WHERE album.label.id = %s'
