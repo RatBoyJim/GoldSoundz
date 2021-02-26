@@ -35,6 +35,5 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 #### GitHub link
 [https://github.com/RatBoyJim/GoldSoundz]
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+#### Website link
+[https://gold-soundz.herokuapp.com/]
